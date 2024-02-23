@@ -1,0 +1,77 @@
+@import "./Styles/colors.scss";
+
+:root {
+  --primary-color: #{$primary-color};
+  --contrast-text: #0d0d0d;
+  --fc-today-bg-color: #40445666;
+  --fc-button-bg-color: var(--primary-color);
+  --fc-button-active-bg-color: var(--primary-color);
+  --fc-button-hover-bg-color: var(--primary-color);
+  // $primary: var(--primary-color);
+  // $secondary: var(--secondary-color);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe   UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 25px;
+}
+
+*:hover::-webkit-scrollbar {
+  display: initial;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $text-color;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+
+  >div {
+    padding: 2rem 2rem 8rem;
+    width: 100%;
+  }
+}
+
+.home {
+  background: url("./Assets/images/store.gif") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $light-text-color;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+}

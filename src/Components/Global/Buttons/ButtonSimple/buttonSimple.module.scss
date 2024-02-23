@@ -1,0 +1,14 @@
+@import "../../../../Styles/colors.scss";
+.btnSimple{
+     padding: 10px;
+      background-color: $primary-color;
+      color: $light-text-color;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+}

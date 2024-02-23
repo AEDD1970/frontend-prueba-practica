@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer';
+import './index.scss';
+import ButtonSimple from './Components/Global/Buttons/ButtonSimple';
 
 function App() {
+  const [openStore, setOpenStore] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {openStore ? <div className='home'>
+        <ButtonSimple handleOnclick={() => setOpenStore(false)}> open store</ButtonSimple>
+      </div> :
+        <BrowserRouter>
+          <main className='main'>
+            <NavBar />
+            <Routes />
+            <Footer />
+          </main>
+        </BrowserRouter>
+      }
+
+
+    </React.Fragment>
+
+
   );
 }
 

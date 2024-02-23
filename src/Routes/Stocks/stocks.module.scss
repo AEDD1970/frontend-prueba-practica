@@ -1,0 +1,32 @@
+@import "../../Styles/colors.scss";
+
+
+.wrapperFormCreateStocks {
+    background: url("../../Assets/images/wallPapper.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $light-text-color;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    .wraperDetail{
+      b{
+        color: $text-color;
+        font-weight: bold;
+      }
+    }
+    .containerBtn{
+      gap: 1rem;
+      display: flex;
+
+      button{
+        width: 100px;
+      }
+    }
+}
+
+

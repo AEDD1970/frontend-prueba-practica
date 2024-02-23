@@ -1,0 +1,51 @@
+@import "../../../../Styles/colors.scss";
+
+.wrapperCard {
+    background-color: $light-text-color;
+    border-radius: calc(9px + 7*(100vw - 320px)/1600);
+    padding: 10px;
+    border: 1px solid #eee;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .cardImg {
+        img {
+            width: 100%;
+            height: 140px;
+            border-radius: 10px;
+            object-fit: contain;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .contentProduct {
+        .containerPrice {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .price {
+            color: $secondary-color;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        button {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}
